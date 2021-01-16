@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainScreen">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #5C6BC0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="448.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="90.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="9.0">
+                     <image>
+                        <Image url="@../Images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="30.0" layoutY="129.0" prefHeight="30.0" prefWidth="119.0" text="AD - SOYAD : " textFill="WHITE" AnchorPane.rightAnchor="155.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="159.0" prefHeight="30.0" prefWidth="150.0" text="KULLANICI ADI : " textFill="WHITE" AnchorPane.rightAnchor="148.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelName" layoutX="153.0" layoutY="129.0" prefHeight="30.0" prefWidth="150.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelSurname" layoutX="155.0" layoutY="159.0" prefHeight="30.0" prefWidth="150.0" AnchorPane.rightAnchor="5.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnProfil" layoutX="231.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#menuProfilClick" onMouseEntered="#btnEnteredProfil" onMouseExited="#btnExitedProfil" style="-fx-background-color: #283593;" text="PROFİL" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="50.0" layoutY="59.0" prefHeight="3.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="202.0">
+               <children>
+                  <Label fx:id="lblAnasayfa" onMouseClicked="#menuAnasayfaClick" onMouseEntered="#enteredAnasayfa" onMouseExited="#exitedAnasayfa" prefHeight="64.0" prefWidth="300.0" text="   ANASAYFA" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblKitaplar" onMouseClicked="#menuKitaplarClick" onMouseEntered="#enteredKitaplar" onMouseExited="#exitedKitaplar" prefHeight="64.0" prefWidth="300.0" text="   KİTAPLAR" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblKitapOduncAl" onMouseClicked="#menuOduncAlClick" onMouseEntered="#enteredKitapOduncAl" onMouseExited="#exitedKitapOduncAl" prefHeight="64.0" prefWidth="300.0" text="   KİTAP ÖDÜNÇ AL" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/open-book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblKitapIadeEt" onMouseClicked="#menuIadeEtClick" onMouseEntered="#enteredKitapIadeEt" onMouseExited="#exitedKitapIadeEt" prefHeight="64.0" prefWidth="300.0" text="   KİTAP İADE ET" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/returning.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblKitapEkle" onMouseClicked="#menuKitapEkleClick" onMouseEntered="#enteredKitapEkle" onMouseExited="#exitedKitapEkle" prefHeight="64.0" prefWidth="300.0" text="   KİTAP EKLE" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/addBook.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblKutuphaneBilgileri" onMouseClicked="#menuKutuphaneBilgileriClick" onMouseEntered="#enteredKutuphaneBilgileri" onMouseExited="#exitedKutuphaneBilgileri" prefHeight="64.0" prefWidth="300.0" text="   KÜTÜPHANE BİLGİLERİ" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/online-learning.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="lblCikis" onMouseClicked="#menuCikisClick" onMouseEntered="#enteredCikis" onMouseExited="#exitedCikis" prefHeight="64.0" prefWidth="300.0" text="   ÇIKIŞ" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/exit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelAnasayfa" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="99.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/boy.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="260.0" layoutY="31.0" text="YAPIMCILAR" textFill="#283593">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="446.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/boy.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="96.0" layoutY="241.0" text="HÜSEYİN YAZICI" textFill="#ab47bc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="437.0" layoutY="241.0" text="EREN CAN AKTAŞ" textFill="#ab47bc">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="378.0" prefHeight="18.0" prefWidth="590.0" text="Bu proje 2020 senesinde Hüseyin Yazıcı ve Eren Can Aktaş tarafından Nesne ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="404.0" prefHeight="18.0" prefWidth="590.0" text="Yönelimli Programlama dersinin proje ödevi olarak yapılmıştır. Herkes ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="430.0" prefHeight="18.0" prefWidth="590.0" text="tarafından kullanılması kolay olması için projeyi geliştirirken bir çok farklı ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="456.0" prefHeight="18.0" prefWidth="590.0" text="tasarım denemiş en sonunda basit ve sade bir tasarımı seçmişlerdir.">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="482.0" prefHeight="18.0" prefWidth="590.0" text="Geliştiricilerimiz bu projeyi yaptıkalrı için teşekkür ediyoruz. Herhangi bir ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="508.0" prefHeight="18.0" prefWidth="590.0" text="sorunuz olduğunda yukarıda verilen e-posta veya telefon numaralarından ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="534.0" prefHeight="18.0" prefWidth="590.0" text="ulaşabilirsiniz.">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="332.0" text="PROJE HAKKINDA" textFill="#ef5350">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="271.0" text="   huseyinyazici128@gmail.com">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gmail.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="435.0" layoutY="271.0" text="   erencan123@gmail.com">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gmail.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelKitaplar" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="textBookSearch" layoutX="167.0" layoutY="8.0" prefHeight="37.0" prefWidth="518.0">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></TextField>
+            <TableView fx:id="tableBook" layoutX="14.0" layoutY="61.0" prefHeight="582.0" prefWidth="674.0">
+              <columns>
+                <TableColumn fx:id="columnBookKitapAdi" prefWidth="212.0" text="KİTAP ADI" />
+                <TableColumn fx:id="columnBookYazarAdi" minWidth="0.0" prefWidth="224.79998779296875" text="YAZAR ADI" />
+                  <TableColumn fx:id="columnBookSayfaSayisi" minWidth="0.0" prefWidth="97.60003662109375" text="SAYFA SAYISI" />
+                  <TableColumn fx:id="columnBookTuru" prefWidth="145.599853515625" text="TÜRÜ" />
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="14.0" text="ARAMA KUTUSU">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelOduncAl" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="textBorrowUserName" layoutX="225.0" layoutY="262.0" prefHeight="50.0" prefWidth="250.0" promptText="KULLANICI ADI">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textBorrowBookName" layoutX="225.0" layoutY="338.0" prefHeight="50.0" prefWidth="250.0" promptText="KİTAP ADI">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnBorrow" layoutX="275.0" layoutY="422.0" mnemonicParsing="false" onAction="#borrowBook" onMouseEntered="#btnEnteredBorrow" onMouseExited="#btnExitedBorrow" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #283593;" text="ÖDÜNÇ AL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="202.0" fitWidth="258.0" layoutX="249.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/borrowbook.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelIadeEt" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="textReturnUserName" layoutX="225.0" layoutY="272.0" prefHeight="50.0" prefWidth="250.0" promptText="KULLANICI ADI">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="textReturnBookName" layoutX="225.0" layoutY="348.0" prefHeight="50.0" prefWidth="250.0" promptText="KİTAP ADI">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnReturn" layoutX="275.0" layoutY="420.0" mnemonicParsing="false" onAction="#returnBook" onMouseEntered="#btnEnteredReturn" onMouseExited="#btnExitedRetrun" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #283593;" text="İADE ET" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="202.0" fitWidth="258.0" layoutX="249.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/returnbook.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelKutuphaneBilgileri" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="50.0" layoutY="59.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #9FA8DA;">
+               <children>
+                  <Label layoutX="404.0" layoutY="70.0" text="ÜYE SAYISI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="70.0" text="KİTAP SAYISI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="textNumberOfBook" alignment="CENTER" layoutX="98.0" layoutY="6.0" prefHeight="55.0" prefWidth="100.0" text="1500" textFill="#ec407a">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelNumberOfUser" alignment="CENTER" layoutX="390.0" layoutY="6.0" prefHeight="55.0" prefWidth="100.0" text="25" textAlignment="CENTER" textFill="#ab47bc">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="55.0" layoutY="245.0" prefHeight="18.0" prefWidth="590.0" text="Gazi Kütüphanesi Üniversitemizin eğitim-öğretim ve araştırma faaliyetlerini">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="271.0" prefHeight="18.0" prefWidth="590.0" text="desteklemek amacıyla 2020 yılında kurulmuştur. Bünyesinde bir çok kitap ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="297.0" prefHeight="18.0" prefWidth="590.0" text="barındıran kütüphanemizden, aldığınız kitabı teslim etmek şartıyla istediğiniz">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="323.0" prefHeight="18.0" prefWidth="590.0" text="kitabı ödünç alabilirsiniz.">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="175.0" layoutY="199.0" text="KÜTÜPHANE HAKKINDA" textFill="#ef5350">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="361.0" text="İLETİŞİM" textFill="#201eaf">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="404.0" text="   gaziuniversitlibrary@gmail.com">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/gmail.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="451.0" text="   (0312) 123 1122">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/phone.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="55.0" layoutY="497.0" text="   Gazi mah. 185 sk. No:5 Yenimahalle/ANKARA">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/address.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelKitapEkle" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="225.0" layoutY="87.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="textBookName" prefHeight="50.0" prefWidth="250.0" promptText="KİTAP ADI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textAuthorName" prefHeight="50.0" prefWidth="250.0" promptText="YAZAR ADI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textNumberOfPage" prefHeight="50.0" prefWidth="250.0" promptText="SAYFA SAYISI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="comboBoxType" prefHeight="50.0" prefWidth="250.0" promptText="TÜRÜ" />
+                  <TextField fx:id="textAdminUserName" prefHeight="50.0" prefWidth="250.0" promptText="PERSONEL KULLANICI ADI">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="textAdminPassword" prefHeight="50.0" prefWidth="250.0" promptText="PERSONEL ŞİFRE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </VBox>
+            <Button fx:id="btnAdd" layoutX="275.0" layoutY="513.0" mnemonicParsing="false" onAction="#addBookClick" onMouseEntered="#btnEnteredAdd" onMouseExited="#btnExitedAdd" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #283593;" text="KİTAP EKLE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelCikis" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="100.0" layoutY="250.0" prefHeight="150.0" prefWidth="500.0" style="-fx-background-color: #283593;">
+               <children>
+                  <Label layoutX="142.0" layoutY="14.0" text="EMİN MİSİNİZ?" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnExit" layoutX="175.0" layoutY="86.0" mnemonicParsing="false" onAction="#clickExit" onMouseEntered="#btnEnteredExit" onMouseExited="#btnExitedExit" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #F44336;" text="ÇIKIŞ YAP" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelProfil" layoutX="300.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="134.0" layoutY="280.0" prefHeight="120.0" prefWidth="215.0" spacing="25.0">
+               <children>
+                  <Label alignment="TOP_LEFT" text="AD - SOYAD : " textFill="#283593">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="90.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="KULLANICI ADI :" textFill="#283593">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="ÖDÜNÇ ALINAN KİTAP : " textFill="#283593">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="290.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="textProfilName" layoutX="349.0" layoutY="280.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="textProfilUserName" layoutX="350.0" layoutY="332.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="textProfilBorrowBook" layoutX="350.0" layoutY="383.0" text="Yok">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

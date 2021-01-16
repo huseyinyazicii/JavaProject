@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="panelMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Login">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #5C6BC0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="195.0" fitWidth="217.0" layoutX="152.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/login.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="67.0" layoutY="335.0" text="GAZİ KÜTÜPHANESİ" textFill="#e3f2fd">
+               <font>
+                  <Font name="Times New Roman Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="158.0" layoutY="391.0" text="Kitap en iyi dosttur" textFill="#e3f2fd">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane" layoutX="500.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="textLogUserName" focusTraversable="false" layoutX="125.0" layoutY="179.0" prefHeight="50.0" prefWidth="250.0" promptText="Kullanıcı Adı">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="textLogPassword" focusTraversable="false" layoutX="125.0" layoutY="255.0" prefHeight="50.0" prefWidth="250.0" promptText="Şifre">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btnLogin" layoutX="175.0" layoutY="332.0" mnemonicParsing="false" onAction="#loginClick" onMouseEntered="#btnEnteredLogin" onMouseExited="#btnExitedLogin" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #283593;" text="GİRİŞ" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNowSignup" layoutX="125.0" layoutY="517.0" mnemonicParsing="false" onAction="#signUpClick" onMouseEntered="#btnEnteredNowSignup" onMouseExited="#btnExitedNowSignup" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #283593;" text="HEMEN ÜYE OL" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/signup.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnLoginClose" layoutX="448.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#closeScreen" onMouseEntered="#btnEnteredCloseLogin" onMouseExited="#btnExitedCloseLogin" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #E3F2FD;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panelSignup" layoutX="500.0" layoutY="8.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E3F2FD;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="125.0" layoutY="109.0" prefHeight="275.0" prefWidth="250.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="textSignName" prefHeight="50.0" prefWidth="250.0" promptText="Ad">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textSignSurname" prefHeight="50.0" prefWidth="250.0" promptText="Soyad">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textSignUserName" prefHeight="50.0" prefWidth="250.0" promptText="Kullanıcı Adı">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="textSignPassword" prefHeight="50.0" prefWidth="250.0" promptText="Şifre">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </VBox>
+            <Button fx:id="btnSignUp" layoutX="175.0" layoutY="417.0" mnemonicParsing="false" onAction="#signUpClickDb" onMouseEntered="#btnEnteredSignup" onMouseExited="#btnExitedSignup" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #283593;" text="ÜYE OL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReturnLogin" layoutX="125.0" layoutY="542.0" mnemonicParsing="false" onAction="#turnBackLogin" onMouseEntered="#btnEnteredReturnLogin" onMouseExited="#btnExitedReturnLogin" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #283593;" text="Giriş Ekranına Dön" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnCloseSignup" layoutX="433.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#closeScreen" onMouseEntered="#btnEnteredCloseSignup" onMouseExited="#btnExitedCloseSignup" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #E3F2FD;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
